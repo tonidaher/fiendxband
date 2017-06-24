@@ -51,6 +51,12 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0-beta1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
@@ -155,8 +161,27 @@
     <Compile Include="Migrations\201706241807191_InitialModel.Designer.cs">
       <DependentUpon>201706241807191_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706241907440_GigContextCreation.cs" />
+    <Compile Include="Migrations\201706241907440_GigContextCreation.Designer.cs">
+      <DependentUpon>201706241907440_GigContextCreation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706241911467_GigContextCreation2.cs" />
+    <Compile Include="Migrations\201706241911467_GigContextCreation2.Designer.cs">
+      <DependentUpon>201706241911467_GigContextCreation2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706242042263_VenueContextCreation.cs" />
+    <Compile Include="Migrations\201706242042263_VenueContextCreation.Designer.cs">
+      <DependentUpon>201706242042263_VenueContextCreation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706242045099_GenerateGenreTable.cs" />
+    <Compile Include="Migrations\201706242045099_GenerateGenreTable.Designer.cs">
+      <DependentUpon>201706242045099_GenerateGenreTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\TestClass.cs" />
+    <Compile Include="Models\FiendXWebsiteContext.cs" />
+    <Compile Include="Models\Genre.cs" />
+    <Compile Include="Models\Gig.cs" />
+    <Compile Include="Models\TestController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -196,6 +221,11 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Test\Create.cshtml" />
+    <Content Include="Views\Test\Delete.cshtml" />
+    <Content Include="Views\Test\Details.cshtml" />
+    <Content Include="Views\Test\Edit.cshtml" />
+    <Content Include="Views\Test\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -218,6 +248,18 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201706241807191_InitialModel.resx">
       <DependentUpon>201706241807191_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706241907440_GigContextCreation.resx">
+      <DependentUpon>201706241907440_GigContextCreation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706241911467_GigContextCreation2.resx">
+      <DependentUpon>201706241911467_GigContextCreation2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706242042263_VenueContextCreation.resx">
+      <DependentUpon>201706242042263_VenueContextCreation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706242045099_GenerateGenreTable.resx">
+      <DependentUpon>201706242045099_GenerateGenreTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
