@@ -20,5 +20,7 @@ namespace FiendXWebsite.Models
         }
 
         public System.Data.Entity.DbSet<FiendXWebsite.Models.Gig> Gigs { get; set; }
+
+        public System.Data.Entity.DbSet<FiendXWebsite.Models.Genre> Genres { get; set; }
     }
 }
